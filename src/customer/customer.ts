@@ -17,6 +17,26 @@ export const customerMenu = async (products: Product[]) => {
         console.table(found);
         break;
       }
+      case '2': {
+        const filterType:string | number = await ask('Filter by (price/category/rating): ');
+        if (filterType === 'price') {
+          const max:number = parseFloat(await ask('Enter max price: '));
+          console.table(products.filter(p => p.price <= max));
+        } 
+        else if (filterType === 'category') {
+          console.log(`categiries : clothing(shirts,pants) , electronic(laptop) `)
+          const category:string = await ask('Enter category: ');
+          console.table(products.filter(p => p.category.toLowerCase() === category.toLowerCase()));
+        } 
+        else if (filterType === 'rating') {
+          const min:number = parseFloat(await ask('Enter min rating: '));
+          console.table(products.filter(p => p.rating >= min));
+        } 
+        else {
+          console.log('Invalid filter type.');
+        }
+        break;
+      }
     }
     await loop();
   };

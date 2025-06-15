@@ -2,7 +2,12 @@
 NAISHMA is a command-line shopping application that brings a simple and fast e-commerce experience right into your terminal. It acts as a one-stop destination where customers can explore a variety of products, search by name, filter by category, price, or rating, and add items to their cart for purchase.
 
 For admins, NAISHMA provides tools to manage the store by adding or removing products easily. NAISHMA gives a smooth and interactive way to handle it all—without leaving the command line.
+### Features
 
+###  Admin
+- Add new products manually
+- Remove products by ID
+- View live product list
 ##  Technologies Used
 
 1. - **TypeScript** 
@@ -15,8 +20,8 @@ For admins, NAISHMA provides tools to manage the store by adding or removing pro
 ### 1. Clone the repository
 
 ```bash
-git clone git@github.com:shaik-mahammad-rafi01/NISHMA.git
-cd NISHMNA
+git clone git@github.com:shaik-mahammad-rafi01/naishma-app.git
+cd naishma-app
 ```
 ### 2. Install Dependencies 
 

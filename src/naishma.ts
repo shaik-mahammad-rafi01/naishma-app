@@ -2,6 +2,7 @@ import { Product } from "./interfaces/product";
 import { fetchProducts } from "./api/api";
 import { ask } from "./utils/utils";
 import { adminMenu } from "./admin/admin";
+import { customerMenu } from "./customer/customer";
 const start = async () => {
     let products:Product[] = await fetchProducts();
   
@@ -13,6 +14,10 @@ const start = async () => {
         products= await adminMenu(products);
         await mainMenu();
       }
+      else if (choice === '2') {
+        await customerMenu(products);
+        await mainMenu();
+      } 
     }
     mainMenu();
 }

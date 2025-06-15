@@ -37,6 +37,20 @@ export const customerMenu = async (products: Product[]) => {
         }
         break;
       }
+      case '3': {
+        const name:string = await ask('Enter product name to add: ');
+        const product = products.find(p => p.title.toLowerCase().includes(name.toLowerCase()));
+        if (product) {
+          const existing = cart.find(c => c.id === product.id);
+          if (existing) existing.quantity++;
+          else cart.push({ ...product, quantity: 1 });
+          console.log('Added to cart.');
+        } 
+        else {
+          console.log('Product not found.');
+        }
+        break;
+      }
     }
     await loop();
   };

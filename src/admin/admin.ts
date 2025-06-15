@@ -33,7 +33,12 @@ export const adminMenu = async (products: Product[]): Promise<Product[]> => {
                 console.log('Product removed!');
                 return adminMenu(updated);
             }
-            
-    };
-    return adminMenu(products);
+
+        case '3':
+            return products;
+
+        default:
+            console.log('Invalid choice.');
+            return adminMenu(products);
+    }
 }

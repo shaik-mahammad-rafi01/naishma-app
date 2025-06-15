@@ -51,6 +51,10 @@ export const customerMenu = async (products: Product[]) => {
         }
         break;
       }
+      case '4': {
+        console.table(cart);
+        break;
+      }
     }
     await loop();
   };

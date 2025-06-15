@@ -55,6 +55,10 @@ export const customerMenu = async (products: Product[]) => {
         console.table(cart);
         break;
       }
+      case '5':
+        return;
+      default:
+        console.log('Invalid choice.');
     }
     await loop();
   };

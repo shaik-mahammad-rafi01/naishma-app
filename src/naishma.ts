@@ -18,7 +18,15 @@ const start = async () => {
         await customerMenu(products);
         await mainMenu();
       } 
+      else if (choice === '3') {
+        console.log('Goodbye!');
+        close();
+      }
+       else {
+        console.log('Invalid option.');
+        await mainMenu();
+      }
     }
-    mainMenu();
+    await mainMenu();
 }
 start();

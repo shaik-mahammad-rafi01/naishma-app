@@ -8,6 +8,16 @@ For admins, NAISHMA provides tools to manage the store by adding or removing pro
 - Add new products manually
 - Remove products by ID
 - View live product list
+
+###  Customer
+- Search products by keyword
+- Filter products by:
+  - Price
+  - Category
+  - Rating
+- Add products to cart
+- View cart contents
+
 ##  Technologies Used
 
 1. - **TypeScript** 
